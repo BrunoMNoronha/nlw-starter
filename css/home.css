@@ -1,38 +1,10 @@
-:root {
-    --title-color: #322153;
-    --primary-color: #34cb79;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
-    background: #f0f0f5;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--title-color);
-    font-family: 'Ubuntu', sans-serif;
-}
-
 #page-home {
     height: 100vh;
     background: url(../assets/home-background.svg) no-repeat;
     background-position: 35vw bottom;
 }
 
-.container {
+#page-home .container {
     width: 90%;
     max-width: 1100px;
     height: 100%;
@@ -41,20 +13,20 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 
-header {
+#page-home header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 48px;
 }
 
-header a {
+#page-home header a {
     display: flex;
     color: var(--title-color);
     font-weight: 700;
 }
 
-header a span {
+#page-home header a span {
     margin-right: 16px;
     display: flex;
     background-image: url('../assets/log-in.svg');
@@ -62,7 +34,7 @@ header a span {
     height: 20px;
 }
 
-main {
+#page-home main {
     max-width: 560px;
     flex: 1;
     display: flex;
@@ -70,17 +42,17 @@ main {
     justify-content: center;
 }
 
-main h1 {
+#page-home main h1 {
     font-size: 54px;
 }
 
-main p {
+#page-home main p {
     font-size: 24px;
     line-height: 38px;
     margin-top: 24px;
 }
 
-main a {
+#page-home main a {
     width: 100%;
     max-width: 360px;
     height: 72px;
@@ -92,11 +64,11 @@ main a {
     transition: 0.4s;
 }
 
-main a:hover {
+#page-home main a:hover {
     background-color: #2fb86e;
 }
 
-main a span {
+#page-home main a span {
     width: 72px;
     height: 72px;
     border-top-left-radius: 8px;
@@ -107,40 +79,15 @@ main a span {
     justify-content: center;
 }
 
-main a span::after {
+#page-home main a span::after {
     content: "";
     background-image: url('../assets/search.svg');
     width: 20px;
     height: 20px;
 }
 
-main a strong {
+#page-home main a strong {
     flex: 1;
     color: #fff;
     text-align: center;
-}
-
-@media (max-width: 1366px) {
-    #page-home {
-        background-size: 50%;
-    }
-}
-
-@media (max-width: 900px) {
-    #page-home {
-        background-position: 100vw bottom;
-    }
-    #page-home .container {
-        align-items: center;
-        text-align: center;
-    }
-    #page-home header a {
-        position: absolute;
-        bottom: 48px;
-        left: 50%;
-        transform: translate(-50%);
-    }
-    #page-home main {
-        align-items: center;
-    }
 }

@@ -1,0 +1,24 @@
+@media (max-width: 1366px) {
+    #page-home {
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    #page-home {
+        background-position: 100vw bottom;
+    }
+    #page-home .container {
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #page-home main {
+        align-items: center;
+    }
+}
