@@ -1,6 +1,7 @@
 @media (max-width: 1366px) {
     #page-home {
         background-size: 50%;
+        background-position: 55vw bottom;
     }
 }
 
@@ -12,13 +13,19 @@
         align-items: center;
         text-align: center;
     }
-    #page-home header a {
+    #page-home header a + a {
         position: absolute;
-        bottom: 48px;
+        bottom: -190px;
         left: 50%;
         transform: translate(-50%);
     }
     #page-home main {
         align-items: center;
+    }
+    #page-home main h1 {
+        font-size: 42px;
+    }
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
     }
 }
