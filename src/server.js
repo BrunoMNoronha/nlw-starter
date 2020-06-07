@@ -1,21 +1,24 @@
 const express = require('express');
 const server = express();
-const path = require('path');
+const nunjucks = require('nunjucks');
 
-// require('./routes');
+nunjucks.configure('src/views', {
+  express: server,
+  noCache: true
+})
 
 server.use(express.static('public'))
 
 server.get('/', function (req, res) {
-  res.sendFile(path.resolve(__dirname, '..', 'src', 'views', 'index.html'))
+  return res.render('index.html')
 });
 
 server.get('/create-point', function (req, res) {
-  res.sendFile(path.resolve(__dirname, '..', 'src', 'views', 'create-point.html'))
+  return res.render('create-point.html')
 });
 
-server.get('/search-results', function (req, res) {
-  res.sendFile(path.resolve(__dirname, '..', 'src', 'views', 'search-results.html'))
+server.get('/search', function (req, res) {
+  return res.render('search-results.html')
 });
 
 server.listen(3000);
